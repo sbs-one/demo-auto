@@ -7,4 +7,4 @@ Feature: Login user
     Then Input login
     Then Input password
     Then Click "Sign in" button span
-    Then Content with "Welcome on board" visible11111111111
+    Then Content with "Welcome on board" visible
