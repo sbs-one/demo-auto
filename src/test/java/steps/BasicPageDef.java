@@ -1,7 +1,10 @@
 package steps;
 
+import config.EnvConfig;
 import io.cucumber.java.en.Then;
 import pages.BasicPage;
+
+import static com.codeborne.selenide.Selenide.open;
 
 public class BasicPageDef {
     BasicPage basicPage = new BasicPage();
@@ -21,5 +24,10 @@ public class BasicPageDef {
     @Then("Content with {string} visible")
     public void contentWithVisible(String arg0) {
         basicPage.contentInVisible(arg0);
+    }
+
+    @Then("Open {string} page")
+    public void openPage(String arg0) {
+        open(EnvConfig.URI_LOGIN + arg0);
     }
 }
